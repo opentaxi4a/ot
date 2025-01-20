@@ -1,17 +1,34 @@
 
-/**
- * router/index.ts
- *
- * Automatic routes for `./src/pages/*.vue`
- */
-
-// Composables
 import { createRouter, createWebHistory } from 'vue-router/auto'
-import { routes } from 'vue-router/auto-routes'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      redirect: '/user/login'
+    },
+    {
+      path: '/user/',
+      component: () => import('../pages/single/base.vue'),
+      children: [
+        {
+          path: 'login',
+          component: () => import('../pages/single/login.vue'),
+        },
+      ]
+    }, {
+      path: '/app/',
+      component: () => import('../pages/app/base.vue'),
+      children: [
+        {
+          path: 'home',
+          component: () => import('../pages/app/home.vue'),
+        },
+      ]
+    }
+  ]
 })
 
 // Workaround for https://github.com/vitejs/vite/issues/11804
