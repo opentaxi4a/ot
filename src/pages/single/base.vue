@@ -1,5 +1,5 @@
 <template>
- singlepage
+ <Router-view />
 </template>
 
 <script setup>

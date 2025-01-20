@@ -8,3 +8,7 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
+
+@use 'vuetify' with (
+   $body-font-family: 'Shabnam FD' /*put the font family name here*/
+);
