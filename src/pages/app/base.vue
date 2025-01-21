@@ -5,7 +5,6 @@
 
   <v-app-bar color="deep-orange">
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
     <v-app-bar-title>{{ $t('app.name') }}</v-app-bar-title>
   </v-app-bar>
 
