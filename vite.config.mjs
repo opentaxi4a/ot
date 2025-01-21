@@ -48,8 +48,15 @@ export default defineConfig({
       '.vue',
     ],
   },
+  preview: {
+		port: 3000,
+		strictPort: true,
+		host: '0.0.0.0', 
+		allowedHosts: true,
+	},
   server: {
     port: 3000,
+    allowedHosts: true,
   },
   css: {
     preprocessorOptions: {

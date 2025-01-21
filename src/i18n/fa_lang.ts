@@ -9,8 +9,15 @@ const fa_lang = {
             long: "ریال ایران"
         }
     },
-    app:{
-        name:"تاکسی باز"
+    app: {
+        name: "کوبر",
+        loading: "در حال بارگزاری ...",
+        login: "ورود و عضویت",
+        mobile: "تلفن همراه",
+        mobile_example: "09121234567",
+    },
+    des:{
+        terms_accept:"ورود و عضویت به معنای پذیرش قوانین استفاده از سرویس خواهد بود.",
     }
 };
 export default fa_lang
