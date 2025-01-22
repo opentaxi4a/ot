@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main class="bg-yellow-darken-2">
+    <v-main class="bg-yellow-darken-2 pa-0 ma-0">
       <router-view />
     </v-main>
   </v-app>
@@ -23,7 +23,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.overlay = false
-    }, 3000);
+    }, 300);
   },
 }
 </script>

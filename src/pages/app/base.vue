@@ -8,7 +8,7 @@
     <v-app-bar-title>{{ $t('app.name') }}</v-app-bar-title>
   </v-app-bar>
 
-  <v-main>
+  <v-main class="ma-0 pa-0">
     <RouterView />
   </v-main>
 </template>
