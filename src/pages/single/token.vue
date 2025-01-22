@@ -11,8 +11,12 @@
           </template>
           <v-card-text class="pt-4">
             <v-form :disabled="loading" ref="form" fast-fail @submit.prevent="submit()">
-              <v-text-field :disabled="loading" type="tel" v-model="tel" :rules="rules" :label="$t('app.mobile')"
-                prepend-inner-icon="mdi-phone"></v-text-field>
+              <v-otp-input
+      v-model="otp"
+      class="mt-3 ms-n2"
+      length="5"
+      placeholder="0"
+    ></v-otp-input>
               <v-card-text class="pt-4">
                 <v-banner class="border-0 text-error" color="warning" :text="$t('des.terms_accept')"
                   :stacked="true"></v-banner>
@@ -49,23 +53,20 @@ export default {
         msg: '',
         type: ''
       },
-      tel: '',
+      otp: '',
       rules: [
         value => {
-          var regex = new RegExp("^(\\+98|0)?9\\d{9}$");
-          var result = regex.test(value);
-          if (result) return true
-          return self.$t('des.tel_notvalid');
+          return true;
         },
       ],
     }
   },
   methods: {
     async submit() {
+      this.$router.push('/app/home');
       const { valid } = await this.$refs.form.validate();
       if (valid) {
         this.loading = true;
-        this.$router.push('/user/token/' + this.tel)
         axios.post('/user/login', { tel: this.tel }).then((response) => {
           if (response.data.success == true) {
             this.$router.push('/user/token/' + this.tel)

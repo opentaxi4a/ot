@@ -16,6 +16,9 @@ const router = createRouter({
         {
           path: 'login',
           component: () => import('../pages/single/login.vue'),
+        },{
+          path: 'token/:tel',
+          component: () => import('../pages/single/token.vue'),
         },
       ]
     }, {
