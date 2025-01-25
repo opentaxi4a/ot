@@ -1,13 +1,13 @@
 <template>
   <v-app>
-    <v-main class="bg-yellow-darken-2 pa-0 ma-0">
+    <v-main class="bg-indigo-darken-2 pa-0 ma-0">
       <router-view />
     </v-main>
   </v-app>
   <div class="text-center">
     <v-overlay :model-value="overlay" class="align-center justify-center">
-      <div class="text-center text-primary">
-        <v-progress-circular color="primary" class="mb-4" size="42" indeterminate></v-progress-circular>
+      <div class="text-center text-blue-lighten-5">
+        <v-progress-circular color="blue-lighten-5" class="mb-4" size="42" indeterminate></v-progress-circular>
         <br>
         {{ $t('app.loading') }}
       </div>

@@ -2,3 +2,8 @@
     font-family: 'Shabnam FD';
     src: url(/fonts/shabnam/Shabnam-FD.ttf) format(truetype);
 }
+
+main {
+    height: 89.5vh;
+    width: 100vw;
+}
